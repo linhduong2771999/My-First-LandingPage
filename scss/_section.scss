@@ -1,0 +1,213 @@
+@import './abstracts/variables';
+@import './abstracts/mixin';
+
+#main{
+    .container{
+        width: 1140px;
+        margin: auto;
+        .title{
+            width: 800px;
+            margin:  auto;
+            text-align: center;
+            h2{
+                margin: 10px 0;    
+                font-weight: normal;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            div{
+                margin: 20px 0;
+                font-style: italic;
+                opacity: 0.5;
+            }
+            p{
+                margin: 25px 0;
+                letter-spacing: 0.5px;
+                text-align: justify!important;
+            }
+        }
+        h2{
+            margin: 100px 0 30px 0 ;
+            font-size: 32px;
+            font-weight: normal;
+        }
+        hr{
+            width: 100%;
+            opacity: 0.5;
+            border-top: 1px solid grey;
+        }
+        .grid{
+            @include flexBox();
+            flex-wrap: wrap;
+            margin-top: 50px;
+            .grid-row{
+                position: relative;
+                margin-top: 8px;     
+                img{
+                    cursor: pointer;
+                    &:hover{
+                        transition: 0.3s ease-in;
+                        opacity: 0.5;
+                    }
+                }
+                button{
+                    position: absolute;
+                    outline:none;
+                    border: none;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    padding: 12px 28px;
+                    @include backgroundColor(rgba(12, 10, 10, 0.714),white);
+                    @include specifyPosition(0,none,none,0);                
+                }
+            }
+        }
+        .music{
+            margin-top : 60px;
+            h2{
+                margin: 35px 0;
+                font-size: 32px;
+                font-weight: normal;
+            }
+            hr{
+                width: 100%;
+                opacity: 0.5;
+                border-top: 1px solid grey;
+            }
+            .music-container{
+                width: 100%;
+                margin-top: 40px;
+                @include flexBox();
+                .music-content{
+                    width: 40%;
+                    text-align: left;
+                    padding: 20px 20px 20px 0;
+                    h3{
+                        font-size: 14px;
+                        font-weight: normal;
+                        letter-spacing: 1px;
+                    }
+                    .music-box-kpop, .music-box-usuk, .music-box-vpop{
+                        padding: 5px;
+                        margin: 15px 0;
+                    }
+                    .music-box-kpop{
+                        width: 80%;
+                        @include backgroundColor(pink ,#d6489b );
+                    }
+                    .music-box-usuk{
+                        width: 100%;
+                        @include backgroundColor(rgb(147, 20, 134) ,white );
+                    }
+                    .music-box-vpop{
+                        @include backgroundColor(rgb(77, 221, 159) , #1d9a3a );
+                        width: 70%;
+                    }
+                }
+                .owl-carousel{
+                    width: 60%;
+                }
+            }
+        }
+        .contact{
+            margin-top: 80px;
+
+            .contact-container{
+                width: 100%;
+                margin-top: 80px;
+                @include flexBox();
+                .contact-form{
+                    width: 40%;
+                    padding: 15px 15px 15px 0;
+                    input{
+                        width: 100%;
+                        margin: 10px 0;
+                        padding:10px 10px;
+                        border: none;
+                        outline: none; 
+                        border-radius: 2px;
+                        display: inline-block;
+                        transition: 0.5s ease-in;
+                        &:focus{
+                            border: 2px solid pink;
+                        }
+                    }
+                    textarea{
+                        width: 100%;
+                        resize: none;
+                        margin-top: 10px;
+                    }
+                    button{
+                        margin-top:20px;
+                        padding: 10px 14px;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        @include backgroundColor(black, white);
+                    }
+                }
+                .contact-img{
+                    @include widthHeight(60% , 100%);
+                    .img{
+                        background-image: url('https://ak4.picdn.net/shutterstock/videos/3818864/thumb/1.jpg') ;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        @include widthHeight(100%, 400px);
+                    }
+                }
+            }
+        }
+    }
+    .modal{
+        display: none; 
+        position: fixed; 
+        padding-top: 100px; 
+        overflow: auto; 
+        z-index: 1110;  
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.9);
+        @include widthHeight(100%, 100%); 
+        @include specifyPosition(0 , none , none , 0);
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        #caption {
+            margin: auto;
+            padding: 10px 0;
+            display: block;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            @include widthHeight(80%, 150px);
+        }
+        .modal-content, #caption{
+            animation: zoom 0.2s ease-in;
+            @keyframes zoom {
+                from{
+                    transform: scale(0.1)
+                }
+                to{
+                    transform: scale(1);
+                }
+            }
+        }
+        .close {
+            position: absolute;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            @include specifyPosition(15px,35px,none,none);
+            &:hover, &:focus{
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

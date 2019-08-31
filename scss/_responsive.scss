@@ -1,0 +1,419 @@
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1199px)";
+$res_1200 : "only screen and (min-width: 1200px)";
+ 
+ 
+@mixin responsive_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+@mixin responsive_375() {
+    @media #{$res_375} {
+        @content;
+    }
+}
+@mixin responsive_425() {
+    @media #{$res_425} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
+
+// responsive header
+@include responsive_1024(){
+    #header{
+        min-width: 1024px;
+        nav{
+            .container{
+                max-width: 850px;
+            }
+        }
+    }
+    #view{
+        height: auto;
+        .carousel{
+            .carousel-item{
+                .captionText{
+                    top: 80%;
+                }
+            }
+            .prev, .next{
+                top: 42%;
+            }
+        }
+    }
+    #main{
+        margin-top: 40px;
+        .container{
+            max-width: 900px;
+            .grid{
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+                .grid-row{
+                    width: 33%;
+                    button{
+                        left: 11px;
+                    }
+                }
+            }
+           
+        }
+        
+    }
+}
+@include responsive_992(){
+    #header{
+        min-width: 993px;
+        nav{
+            .container{
+                max-width: 900px;
+            }
+        }
+    }
+    #view{
+        height: auto;
+        .carousel{
+            .carousel-item{
+                .captionText{
+                    top: 80%;
+                }
+            }
+            .prev, .next{
+                top: 42%;
+            }
+        }
+    }
+    #main{
+        margin-top: 40px;
+        .container{
+            max-width: 900px;
+            .grid{
+                flex-wrap: wrap;
+                text-align: center;
+                .grid-row{
+                    width: 50%;
+                }
+            }
+            
+        }
+        
+    }
+}
+@include responsive_768(){
+    #header{
+        min-width: 769px;
+        nav{
+            .container{
+                max-width: 650px;
+                margin: 0 auto;
+            }
+        }
+    }
+    #view{
+        height: auto;
+        .carousel{
+            .carousel-item{
+                img{
+                    min-width: 769px;
+                }
+                .captionText{
+                    bottom: 8%;
+                }
+                
+            }
+            .prev, .next{
+                top: 40%;
+            }
+        }
+    }
+    #main{
+        .container{
+            max-width: 650px;
+            .title{
+                max-width: 650px;
+                margin: 30px 0;
+            }
+            .grid{
+                flex-wrap: wrap;
+                text-align: center;
+                .grid-row{
+                    width: 50%;
+                    button{
+                        left: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive_425(){
+    #header{
+       min-width: 426px;
+        nav{
+            .container{
+                max-width: 360px;
+                margin: 0 auto;
+                ul{
+                    li{
+                        a{
+                            padding: 14px 14px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #view{
+        height: auto;
+        .carousel{
+            .carousel-item{
+                img{
+                    min-width: 425px;
+                    height: auto;
+                }
+                .captionText{
+                    bottom: 8%;
+                }
+            }
+        }
+    }
+    #main{
+        margin-top: 40px;
+        .container{
+            max-width:  360px;
+            text-align: center; 
+            .title{
+                width: 360px;
+            }
+            .grid{
+                flex-direction: column;
+                margin: auto;
+            }
+            .music{
+                .music-container{
+                    flex-direction: column;
+                    .music-content{
+                        width: 100%;
+                    }
+                    .owl-carousel{
+                        margin-top: 10px;
+                        width: 100%;
+                    }
+                }
+            }
+            .contact{
+                .contact-container{
+                    flex-direction: column;
+                    .contact-form{
+                        width: 100%;
+                    }
+                    .contact-img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive_375(){
+    #header{
+        min-width: 376px;
+         nav{
+             .container{
+                 max-width: 300px;
+                 margin: 0 auto;
+                 ul{
+                     li{
+                         a{
+                             padding: 15px 13px;
+                             font-size: 12px;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     #view{
+         height: auto;
+         .carousel{
+             .carousel-item{
+                 .numberText{
+                     font-size: 14px;
+                     top: 35px;
+                 }
+                 img{
+                     min-width: 376px;
+                     height: auto;
+                 }
+                 .captionText{
+                     bottom: 8%;
+                     font-size: 10px;
+                     span{
+                        font-size: 24px;
+                    }
+                 }
+             }
+         }
+     }
+     #main{
+         margin-top: 40px;
+         .container{
+             max-width:  300px;
+             text-align: center; 
+             .title{
+                 width: 300px;
+                 h2{
+                     font-size: 24px;
+                 }
+             }
+             hr{
+                 margin: 15px 0 25px 0  ;
+             }
+             .grid{
+                 flex-direction: column;
+                 margin: auto;
+                 .grid-row{
+                     button{
+                         left: 13px;
+                     }
+                 }
+             }
+             .music{
+                 .music-container{
+                     flex-direction: column;
+                     .music-content{
+                         width: 100%;
+                     }
+                     .owl-carousel{
+                         margin-top: 10px;
+                         width: 100%;
+                     }
+                 }
+             }
+             .contact{
+                .contact-container{
+                    flex-direction: column;
+                    .contact-form{
+                        width: 100%;
+                    }
+                    .contact-img{
+                        width: 100%;
+                    }
+                }
+            }
+         }
+     }
+}
+@include responsive_320(){
+    #header{
+        min-width: 321px;
+        nav{
+           .container{
+               max-width: 260px;
+               ul{
+                   li{
+                       a{
+                           padding: 17px 8px;
+                           font-size: 10px;
+                       }
+                   }
+               }
+           }
+        }
+    }
+    #view{
+        height: auto;
+        .carousel{
+            .carousel-item{
+                .numberText{
+                    font-size: 14px;
+                    top: 35px;
+                }
+                img{
+                    min-width: 260px;
+                    height: auto;
+                }
+                .captionText{
+                    bottom: 10%;
+                    font-size: 8px;
+                    span{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .prev, .next{
+                top: 33%;
+                font-size: 25px;
+            }
+        }
+    }
+    #main{
+        margin-top: 40px;
+        .container{
+            max-width: 260px;
+            text-align: center;
+            .title{
+                width: 260px;
+                h2{
+                    font-size: 24px;
+                }
+            }
+            hr{
+                margin: 15px 0 25px 0;
+            }
+            .grid{
+                flex-direction: column;
+                margin: auto;
+            }
+            .music{
+                .music-container{
+                    flex-direction: column;
+                    .music-content{
+                        width: 100%;
+                    }
+                    .owl-carousel{
+                        margin-top: 10px;
+                        width: 100%;
+                    }
+                }
+            }
+            .contact{
+                .contact-container{
+                    flex-direction: column;
+                    .contact-form{
+                        width: 100%;
+                    }
+                    .contact-img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

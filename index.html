@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+   
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <nav id="nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fa fa-arrow-right"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Home</a>
+                            <a href="#">Music</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--View-->
+    <div class="view" id="view">
+        <div class="carousel">
+            <div class="carousel-item fade">
+                <div class="numberText">1/3</div>
+                <img src="https://cdn.wallpapersafari.com/44/68/uMSJCG.jpg" />
+                <div class="captionText">Perfect &nbsp;<span>color</span></div>
+            </div>
+            <div class="carousel-item fade">
+                <div class="numberText">2/3</div>
+                <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/EVeDgMMCximbyooji/abstract-dark-blue-abstract-background-ink-in-water-close-up-full-hd_safh5ysf__F0000.png" />
+                <div class="captionText">Super &nbsp;<span>stunning</span></div>
+            </div>
+            <div class="carousel-item fade">
+                <div class="numberText">3/3</div>
+                <img src="https://warnerwave.com/image/116922-full_black-and-white-abstract-wallpaper-wallpapertag.jpg" />
+                <div class="captionText">Wild &nbsp;<span>life</span></div>
+            </div>
+            <a class="prev" onclick="plus(-1)" >&#10094;</a>
+            <a class="next" onclick="plus(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!--Main-->
+    <main id="main">
+        <div class="container">
+            <div class="title">
+                <h2>This is portfolio</h2>
+                <div>&raquo; Let me introduce &laquo;</div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <h2>Picture</h2> 
+            <hr >
+            <section class="grid">
+                <div class="grid-row">
+                    <img src="https://images.wallpaperscraft.com/image/trees_forest_dark_night_118177_3840x2400.jpg" alt="Jungle" width="275" height="250" class="myImg">
+                    <button>Jungle</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://wallpaperaccess.com/full/32822.jpg" alt="Scale sky" width="275" height="250" class="myImg">
+                    <button>Scale sky</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://www.wallpaperbetter.com/wallpaper/1023/370/544/dark-landscape-lake-hd-1080P-wallpaper.jpg" alt="Night river" width="275" height="250" class="myImg">
+                    <button>Night river</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://wallpaperstream.com/wallpapers/thumbnails/moon-hd/River-House-Fog-and-Moon-Night-View_thumb.jpg" alt="Fog" width="275" height="250" class="myImg">
+                    <button>Fog</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://images2.alphacoders.com/113/thumb-1920-113592.jpg" alt="Old house" width="275" height="250" class="myImg">
+                    <button>Old house</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://img.grouponcdn.com/deal/8AtJW3Z8KyxkmvM853hR/QD-2048x1229/v1/c700x420.jpg" alt="Winchester" width="275" height="250" class="myImg">
+                    <button>Winchester</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://cache.desktopnexus.com/thumbseg/235/235734-bigthumbnail.jpg" alt="Hotel" width="275" height="250" class="myImg">
+                    <button>Hotel</button>
+                </div>
+                <div class="grid-row">
+                    <img src="https://i.pinimg.com/originals/a4/df/b3/a4dfb39ac0178f835937d505aeda817d.jpg" alt="Cabin" width="275" height="250" class="myImg">
+                    <button>Cabin</button>
+                </div>
+            </section>
+            <section class="music" id="music-section">
+                <h2>Music</h2>
+                <hr >
+                <div class="music-container">
+                    <div class="music-content">
+                        <h3>Lorem Ipsum is simply dummy text of the printing lorem Ipsum is simply dummy text of the printing lorem Ipsum is simply dummy text of the printing</h3>
+                        <div class="music-box-kpop" >
+                            K-pop: 80%
+                        </div>
+                        <div class="music-box-usuk " >
+                            Us-Uk: 100%
+                        </div>
+                        <div class="music-box-vpop" >
+                            Vpop: 70%
+                        </div>
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt="">
+                        </div>
+                        <div class="item"><img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt=""></div>
+                        <div class="item"><img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt=""></div>
+                        <div class="item"><img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt=""></div>
+                        <div class="item"><img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt=""></div>
+                        <div class="item"><img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/88/2457e4866dde025.jpg" alt=""></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                    <h1>Contact me: </h1>
+
+                <div class="contact-container">
+
+                    <form class="contact-form">
+                        <label><b>Name:</b> </label>
+                        <input type="text" placeholder="Name...">
+
+                        <label><b>Email: </b> </label>
+                        <input type="email" placeholder="Email...">
+
+                        <label><b>Meassage: </b> </label> <br>
+                        <textarea name="message" id="message" rows="10"></textarea>     
+                        
+                        <button type="submit">Send message</button>
+                    </form>
+                    <div class="contact-img">
+                        <div class="img">
+                            sssss
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="modal" id="myModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>Copyright @Duong</h3>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    
+    <script src="./OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

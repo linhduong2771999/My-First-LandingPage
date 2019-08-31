@@ -1,0 +1,26 @@
+@mixin flexBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin specifyPosition($top,$right,$bottom,$left ) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin backgroundColor($background, $color) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin transition($time, $move){
+    -webkit-transition: $time $move;
+    transition: $time $move;
+}

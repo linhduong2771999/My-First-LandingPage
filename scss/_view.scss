@@ -1,0 +1,64 @@
+@import './abstracts/variables';
+@import './abstracts/mixin';
+
+
+#view{
+    @include widthHeight($full-size, $full-size);
+    .carousel{
+    @include widthHeight($full-size, $full-size);
+        position: relative;
+        .carousel-item{
+            @include widthHeight($full-size, $full-size);
+            display: none;
+            .numberText{
+                position: absolute;
+                padding: 10px 14px;
+                font-size: $fs-3;
+                color: $color-white;
+                @include specifyPosition(60px,10px,10px,10px);
+            }
+            img{
+               @include widthHeight(100%, 750px);
+            }
+            .captionText{
+                position: absolute;
+                bottom: 18%;
+                width: 100%;
+                padding: 10px 14px;
+                font-size: 18px;
+                color: $color-white;
+                text-align: center;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                span{
+                    font-weight: 900;
+                    font-size: 50px;
+                }
+            }
+        }
+        .prev, .next{
+            position: absolute;
+            top: 45%;
+            padding:10px 14px;
+            cursor: pointer;
+            color: $color-white;
+            font-size: $fs-3;
+            &:hover{
+                background-color: black;
+                opacity: 0.5;
+            }
+        }  
+        .next{ right: 0; }
+        .fade{
+            animation: fade 1s ease-in;
+            @keyframes fade {
+                from{
+                    opacity: .4;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
